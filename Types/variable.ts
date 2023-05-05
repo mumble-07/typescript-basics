@@ -44,4 +44,11 @@ let thing = "hello";
 thing(); //This expression is not callable. Type 'String' has no call signatures.ts(2349)
 
 //DELAYED INITIALIZATION & IMPLICIT ANY
-let 
+const movies = ['Hour', 'The Thing', 'Amadeus']
+let foundMovie: string;
+
+for (let movie of movies) {
+  if (movie === 'Amadeus') {
+    foundMovie = 'Amadeus';
+  }
+}
