@@ -15,3 +15,11 @@ function greet(person: string) {
 }
 
 // greet(true); //Argument of type 'boolean' is not assignable to parameter of type 'string'.ts(2345)
+
+//ADDING MANY PARAMETERS
+
+const doSomething = (person: string, age: number, isFunny: boolean) => { };
+
+doSomething("You", 25, 123); //Argument of type 'number' is not assignable to parameter of type 'boolean'.ts(2345)
+doSomething("You", 25); //Expected 3 arguments, but got 2.ts(2554)
+doSomething("You", 25, true);
