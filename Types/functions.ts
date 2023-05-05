@@ -23,3 +23,15 @@ const doSomething = (person: string, age: number, isFunny: boolean) => { };
 doSomething("You", 25, 123); //Argument of type 'number' is not assignable to parameter of type 'boolean'.ts(2345)
 doSomething("You", 25); //Expected 3 arguments, but got 2.ts(2554)
 doSomething("You", 25, true);
+
+//WORKING WITH DEFAULT PARAMETERS
+
+function greetings(person: string = 'stranger') {
+  
+  return 'Hi there, ${person}!'
+}
+// so be either a string or nothing
+// Should add default value after the whole annotations
+greetings();
+greetings('Tommy');
+
