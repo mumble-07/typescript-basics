@@ -27,7 +27,7 @@ doSomething("You", 25, true);
 //WORKING WITH DEFAULT PARAMETERS
 
 function greetings(person: string = 'stranger') {
-  
+
   return 'Hi there, ${person}!'
 }
 // so be either a string or nothing
@@ -35,3 +35,20 @@ function greetings(person: string = 'stranger') {
 greetings();
 greetings('Tommy');
 
+// RETURN TYPE ANNOTATIONS
+// A function whose declared type is neither 'undefined', 'void', nor 'any' must return a value.ts(2355)
+// function cube(num: number):number {
+function cube(num: number): number {
+  num * num * num;
+  return num * num * num;
+}
+
+cube(3);
+
+// function random(num: number): string | number
+function random(num: number) {
+  if (Math.random() < 0.5) {
+    return num.toString();
+  }
+  return num;
+}
