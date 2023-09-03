@@ -52,3 +52,10 @@ function random(num: number) {
   }
   return num;
 }
+
+// ANONYMOUS FUNCTION CONTEXTUAL TYPINGS
+// working with anonymous parameters, typescripts can infer the type of parameter due to context (in this case the color), it knows that it is a string since the context of color array.
+const colors = ['red', 'orange', 'yellow'];
+colors.map(color => {
+  return color.toUpperCase();
+})
