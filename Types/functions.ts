@@ -59,3 +59,12 @@ const colors = ['red', 'orange', 'yellow'];
 colors.map(color => {
   return color.toUpperCase();
 })
+
+//VOID
+// this function is not to return anything, kaya merong void
+function printTwice(msg: string): void {
+  console.log(msg);
+  console.log(msg);
+  return ""; // Type 'string' is not assignable to type 'void'.ts(2322)
+}
+
