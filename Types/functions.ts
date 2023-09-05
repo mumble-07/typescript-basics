@@ -68,3 +68,17 @@ function printTwice(msg: string): void {
   return ""; // Type 'string' is not assignable to type 'void'.ts(2322)
 }
 
+// NEVER
+// void- void returns undefined or null, which is technically a type of value
+// never - a function doesn't even finish executing
+
+function makeError(msg: string): never {
+  return undefined //Type 'undefined' is not assignable to type 'never'.ts(2322)
+  throw new Error(msg)
+}
+function gameLoop(): never {
+  while (true) {
+    console.log("GAME LOOP RUNNING!");
+  }
+}
+
